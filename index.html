@@ -18,9 +18,28 @@
         p {
             margin-bottom: 1em;
         }
+        #google_translate_element {
+            position:absolute;
+            top: 10px;  /* 距離頁面頂端 10px */
+            right: 10px; /* 距離頁面右側 10px */
+            z-index: 9999; /* 保證它不會被其他元素遮蓋 */
+        }
     </style>
 </head>
 <body>
+<div id="google-translate-box">
+    <div id="google_translate_element"></div>
+    <!-- Google Translate 的自動翻譯功能 -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'zh-TW',  // 頁面原語言
+                includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,id,ms',  // 支援的翻譯語言（可擴展）
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <h1>催生政策下的人性與虛偽：我們都是別人遊戲裡的NPC</h1>
 
 <p>當今社會頻繁出現「少子化危機」的警告，催生政策不斷出台，鼓吹人們為國家、多生孩子。表面上這似乎是為了國家的未來、民族的延續，但若仔細拆解這些言論的背後，不難發現：真正受益的，往往不是那些努力養育下一代的父母，而是政客、資本家與特定職業群體。</p>
